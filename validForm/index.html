@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="normalize.css" />
+  </head>
+  <body>
+    <main>
+      <form id="form" name="regform" novalidate>
+        <div class="container">
+          <h1>Регистрация</h1>
+          <div class="question">
+            <label for="name">Ваше имя:</label>
+            <input
+              type="text"
+              name="name"
+              placeholder="от 2 до 20 символов"
+              required
+              minlength="2"
+              maxlength="20"
+              id="name"
+            />
+            <span class="error" id="name-error"></span>
+          </div>
+          <div class="question">
+            <label for="email">Ваш email:</label>
+            <input
+              type="email"
+              name="email"
+              id="email"
+              required
+              placeholder="mail@example.com"
+              pattern="^([^ ]+@[^ ]+\.[a-z]{2,6}|)$"
+            />
+            <span class="error" id="email-error"></span>
+          </div>
+          <div class="question">
+            <label for="age">Ваш возраст:</label>
+            <input
+              type="number"
+              name="age"
+              id="age"
+              required
+              placeholder="Ваш возраст"
+            />
+            <span class="error" id="age-error"></span>
+          </div>
+          <div class="question">
+            <fieldset>
+              <legend>Ваш пол</legend>
+              <input type="radio" name="gender" id="man" checked />
+              <label for="man">Мужчина</label>
+              <input type="radio" name="gender" id="woman" />
+              <label for="woman">Женщина</label>
+            </fieldset>
+            <span class="error" id="gender-error"></span>
+          </div>
+          <div class="question">
+            <select name="occupation" id="occupation" required>
+              <option value="" disabled selected>Ваша профессия</option>
+              <option value="Врач">Врач</option>
+              <option value="Программист">Программист</option>
+              <option value="Учитель">Учитель</option>
+              <option value="Дизайнер">Дизайнер</option>
+              <option value="Инженер">Инженер</option>
+              <option value="Продавец">Продавец</option>
+              <option value="Другое">Другое</option>
+            </select>
+            <span class="error" id="occupation-error"></span>
+          </div>
+          <div class="question">
+            <label for="password">Ваш пароль:</label>
+            <input
+              autocomplete="on"
+              type="password"
+              name="password"
+              id="password"
+              placeholder="********"
+              required
+              minlength="8"
+              pattern="^(?=.*[A-Z])(?=.*[a-z])(?=.*\d).{8}$"
+            />
+            <span class="error" id="password-error"></span>
+          </div>
+          <div class="question">
+            <label for="reppassword">Повтор пароля:</label
+            ><input
+              autocomplete="on"
+              type="password"
+              name="reppassword"
+              id="reppassword"
+              placeholder="********"
+              required
+              minlength="8"
+              pattern="/(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z]{8,}/g"
+            />
+            <span class="error" id="reppassword-error"></span>
+          </div>
+          <div class="question">
+            <input type="checkbox" name="checkbox" id="checkbox" required />
+            <label for="checkbox">Согласен с обработкой данных</label>
+            <span class="error" id="checkbox-error"></span>
+          </div>
+          <div class="button"><button type="submit">Отправить</button></div>
+        </div>
+      </form>
+    </main>
+    <script src="sctipt.js"></script>
+  </body>
+</html>

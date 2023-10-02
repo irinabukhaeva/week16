@@ -1,0 +1,34 @@
+.container {
+  height: auto;
+  width: auto;
+  background-color: grey;
+  margin: 1% auto;
+  padding: 30px;
+  border-radius: 1rem;
+}
+h1 {
+  margin: 1%;
+}
+.question {
+  margin: 1%;
+}
+input {
+  height: 30px;
+  border-radius: 5px;
+}
+select {
+  height: 40px;
+  border-radius: 5px;
+}
+fieldset {
+  width: fit-content;
+}
+button {
+  height: 3rem;
+  width: 13rem;
+  border-radius: 5px;
+  margin: 30%;
+}
+.error {
+  color: pink;
+}
