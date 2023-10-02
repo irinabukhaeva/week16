@@ -67,6 +67,5 @@ form.addEventListener("submit", function (event) {
   event.preventDefault();
   isCorrectSelect(select);
   checkAll();
-  if (checkAll() && isCorrectSelect(select) && isCorrectPassword())
-    form.reset();
+  if (isCorrectSelect(select) && isCorrectPassword()) form.reset();
 });
